@@ -1,41 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TradingView Webhook to MT5</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SKBTS Forex Bridge</title>
 </head>
-<body>
-  <h1>TradingView Webhook Test</h1>
-  <form id="webhookForm">
-    <textarea id="payload" rows="10" cols="50">
-{
-  "current_price": 1947.25,
-  "side": "buy",
-  "pos_size": 0.01,
-  "qty": 0.01,
-  "symbol": "XAUUSD",
-  "type": "MT"
-}
-    </textarea><br>
-    <button type="submit">Send Webhook</button>
-  </form>
-
-  <script>
-    document.getElementById("webhookForm").addEventListener("submit", async function(e) {
-      e.preventDefault();
-      const payload = document.getElementById("payload").value;
-      const response = await fetch("/api/webhook", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: payload,
-      });
-      const result = await response.json();
-      alert("Response: " + JSON.stringify(result));
-    });
-  </script>
+<body style="font-family: Arial, sans-serif; background: #f7f7f7; text-align: center; padding: 50px;">
+  <h1>Welcome to SKBTS Forex Bridge</h1>
+  <p style="font-size: 18px;">Automated Trading System for MT5 (XAUUSD)</p>
+  <p style="font-size: 18px;">Monthly Subscription: ₹500</p>
+  <p style="font-size: 16px; color: gray;">This site is under construction.</p>
+  <p>Contact: <a href="mailto:skbtsforex@gmail.com">skbtsforex@gmail.com</a></p>
 </body>
 </html>

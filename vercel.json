@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/place-order.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/place-order",
+      "methods": ["POST"],
+      "dest": "api/place-order.js"
+    }
+  ]
+}
